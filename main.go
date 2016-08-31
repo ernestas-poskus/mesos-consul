@@ -65,7 +65,7 @@ func parseFlags(args []string) (*config.Config, error) {
 	flags.StringVar(&c.Separator, "group-separator", "", "")
 	flags.StringVar(&c.MesosIpOrder, "mesos-ip-order", "netinfo,mesos,host", "")
 	flags.BoolVar(&c.Healthcheck, "healthcheck", false, "")
-	flags.StringVar(&c.HealthcheckIp, "healthcheck-ip", "127.0.0.1", "")
+	flags.StringVar(&c.HealthcheckIp, "healthcheck-ip", "", "")
 	flags.StringVar(&c.HealthcheckPort, "healthcheck-port", "24476", "")
 	flags.Var((funcVar)(func(s string) error {
 		c.TaskWhiteList = append(c.TaskWhiteList, s)
